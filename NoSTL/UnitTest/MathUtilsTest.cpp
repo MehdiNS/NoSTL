@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
 #include "../NoSTL/MathUtils.h"
+#include <cmath>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
