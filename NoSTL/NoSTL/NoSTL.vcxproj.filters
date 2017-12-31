@@ -5,5 +5,7 @@
     <ClInclude Include="MathUtils.h" />
     <ClInclude Include="Vector.h" />
     <ClInclude Include="Vec.h" />
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="Quaternion.h" />
   </ItemGroup>
 </Project>
