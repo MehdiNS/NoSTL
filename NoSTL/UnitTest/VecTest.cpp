@@ -12,7 +12,7 @@ namespace UnitTestsNoSTL
 
 		TEST_METHOD(TestVector3CommonUse)
 		{
-			nostd::Vector3 v0{ 1.f, 0.f, 0.f };
+			nostd::vec3 v0{ 1.f, 0.f, 0.f };
 			Assert::AreEqual(nostd::length(v0), 1.f);
 			Assert::AreEqual(nostd::normalize(v0) == v0, true);
 		}

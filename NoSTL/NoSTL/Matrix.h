@@ -1,5 +1,6 @@
 #pragma once
 #include "Vec.h"
+#include <cassert>
 
 namespace nostd
 {
@@ -27,21 +28,25 @@ namespace nostd
 
 		float& operator()(int i, int j)
 		{
+			assert(i >= 0 && i < 4 && j >= 0 && j < 4);
 			return (_data[j][i]);
 		}
 
 		const float& operator()(int i, int j) const
 		{
+			assert(i >= 0 && i < 4 && j >= 0 && j < 4);
 			return (_data[j][i]);
 		}
 
 		vec3& operator[](int j)
 		{
+			assert(j >= 0 && j < 9);
 			return (*reinterpret_cast<vec3*>(_data[j]));
 		}
 
 		const vec3& operator[](int j) const
 		{
+			assert(j >= 0 && j < 9);
 			return (*reinterpret_cast<const vec3*>(_data[j]));
 		}
 	};
