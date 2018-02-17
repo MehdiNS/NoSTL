@@ -1,5 +1,6 @@
 #pragma once
 #include "MathUtils.h"
+#include <cassert>
 
 namespace nostd
 {
@@ -9,8 +10,8 @@ namespace nostd
 
 		vec3() = default;
 		vec3(float x, float y, float z) : _x{ x }, _y{ y }, _z{ z } {}
-		float& operator[](int i) { return ((&_x)[i]); }
-		const float& operator[](int i) const { return ((&_x)[i]); }
+		float& operator[](int i) { assert(i>=0 && i<4); return ((&_x)[i]); }
+		const float& operator[](int i) const { assert(i >= 0 && i<4); return ((&_x)[i]); }
 		vec3& operator*=(float s) { _x *= s; _y *= s; _z *= s; return (*this); }
 		vec3& operator/=(float s) { s = 1.f / s; _x *= s; _y *= s; _z *= s; return (*this); }
 		vec3& operator+=(const vec3& v) { _x += v._x; _y += v._y; _z += v._z; return (*this); }
